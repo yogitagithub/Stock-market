@@ -1,0 +1,67 @@
+:root{
+  --green:#10b981;  /* emerald-500 */
+  --red:#ef4444;    /* red-500 */
+  --bg:#0b1220;
+  --card:#121a2b;
+  --fg:#e5e7eb;
+  --muted:#94a3b8;
+  --border:rgba(255,255,255,0.08);
+}
+
+*{ box-sizing:border-box; }
+html,body,#root{ height:100%; }
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.container{ max-width:1200px; margin:0 auto; padding:16px; }
+.hdr{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+.title{ font-size:28px; font-weight:700; letter-spacing:.2px; }
+
+.card{
+  background:rgba(18,26,43,.95);
+  border:1px solid var(--border);
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  padding:16px;
+}
+
+.grid{ display:grid; grid-template-columns:1fr; gap:16px; }
+@media (min-width: 900px){
+  .grid{ grid-template-columns: 1.2fr 2fr; }
+}
+
+.input{
+  width:100%; background:#0e1628; color:var(--fg);
+  border:1px solid var(--border); border-radius:12px;
+  padding:10px 12px; outline:none;
+}
+.input::placeholder{ color:#95a0b3; opacity:.6; }
+.btn{
+  background:#1f2937; border:1px solid var(--border); color:var(--fg);
+  padding:10px 14px; border-radius:12px; cursor:pointer;
+}
+.btn:hover{ filter:brightness(1.06); }
+
+.table{ width:100%; border-collapse:collapse; }
+.table th,.table td{ padding:10px 8px; border-bottom:1px solid var(--border); text-align:left; }
+.table thead{ color:var(--muted); font-size:14px; }
+.row:hover{ background:rgba(255,255,255,.04); }
+
+.badge{ padding:2px 8px; border-radius:999px; font-weight:600; font-size:.9rem; display:inline-block; }
+.badge.up{ background:rgba(16,185,129,.15); color:var(--green); }
+.badge.down{ background:rgba(239,68,68,.15); color:var(--red); }
+.small{ font-size:.9rem; color:var(--muted); }
+
+.interval-pill{
+  display:flex; align-items:center; gap:8px;
+  padding:8px 12px; border-radius:12px; border:1px solid var(--border);
+  background:rgba(17,24,39,.6);
+}
+.select{
+  background:transparent; border:none; color:var(--fg); outline:none;
+}
+
+/* little spacing helpers */
+.mb8{ margin-bottom:8px; } .mb12{ margin-bottom:12px; } .mb16{ margin-bottom:16px; }
